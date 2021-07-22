@@ -1,0 +1,201 @@
+/* @import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
+  background: url(https://images.unsplash.com/photo-1483917841983-f83104f9ffa5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1522&q=80) no-repeat center;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  border: 2px solid rgb(255, 198, 77); /* Рамка */
+  z-index: 99;
+}
+
+.slide h3, h4 {
+  font-family: 'Ruslan Display', cursive;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide h2 {
+  font-family: 'Ruslan Display', cursive;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h2 {
+  opacity: 1;
+  transition: opacity 1.3s ease-in 0.4s;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 1.3s ease-in 0.4s;
+}
+
+.slide.active h4 {
+  opacity: 1;
+  transition: opacity 1.3s ease-in 0.4s;
+}
+
+.way {
+  position: absolute;
+  color: #111;
+  text-shadow: #fff 2px 2px 5px;
+  font-size: 6vmax;
+  margin-bottom: 85px;
+  bottom: 6%;
+  left: 22%;
+  white-space: pre-wrap;
+  z-index: 6;
+}
+
+.this {
+  position: absolute;
+  color: #fff;
+  text-shadow: #111 1px 1px 0, #111 2px 2px 0, 
+               #111 3px 3px 0, #111 4px 4px 0, 
+               #111 5px 5px 0;
+  font-size: 3.2vmax;
+  margin-bottom: 0;
+  bottom: 0;
+  left: 15%;
+  white-space: normal;
+  z-index: 7;
+}
+
+.depends.and {
+  top: 38%;
+  left: 33.5%;
+  white-space: pre-wrap;
+}
+
+.depends {
+  position: absolute;
+  color: #fff;
+  font-size: 3.2vmax;
+  top: 48%;
+  left: 23.5%;
+  white-space: pre-wrap;
+}
+
+.depends.he {
+  top: 60%;
+  left: 32%;
+  white-space: pre-wrap;
+}
+
+.only {
+  position: absolute;
+  color: #fff;
+  text-shadow: #111 3px 4px 3px;
+  font-size: 9vmax;
+  bottom: 5%;
+  left: 4%;
+  white-space: pre-wrap;
+}
+
+.only.from {
+  font-size: 7vmax;
+  top: 80%;
+  left: 70%;
+  white-space: pre-wrap;
+}
+
+h2.you {
+  position: absolute;
+  color: #fff;
+    text-shadow: #111 1px 1px 0, #111 2px 2px 0, 
+                 #111 3px 3px 0, #111 4px 4px 0, 
+                 #111 5px 5px 0;
+  font-size: 13vmax;
+  bottom: 0;
+  right: 23.5%;
+  white-space: pre-wrap;
+}
+
+h2.you:hover {
+  color: #111;
+  text-shadow: #fff 1px 1px 0, #fff 2px 2px 0, 
+               #fff 3px 3px 0, #fff 4px 4px 0, 
+               #fff 5px 5px 0;
+}
+
+.choose {
+  position: absolute;
+  text-shadow: #000 0 0 5px;
+  color: transparent;
+  font-size: 4vmax;
+  top: 30%;
+  left: 17%;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+.choose:hover {
+  transform: scale(1.45);
+}
+@media screen and (max-width: 1080px) {
+  .choose {    
+  left: 12%;
+  }
+  .choose:hover {
+  left: 15%;
+  transform: scale(1.45);
+}
+}
+
+@media screen and (max-width: 555px) {
+  .slide.active h2 {
+    font-size: 1vmax;
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0.1s;
+  }
+  .slide.active h3 {
+    font-size: 1vmax;
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0.1s;
+  }
+  .slide.active h4 {
+    font-size: 1vmax;
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0.1s;
+  }
+}
